@@ -18,7 +18,6 @@ RUN chmod 775 /usr/local/bin/add-repo.sh
 RUN chmod 775 /usr/local/bin/run
 RUN chmod 775 /usr/local/bin/donothing
 RUN /usr/local/bin/add-repo.sh && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y zend-server-php-5.4 supervisor && /usr/local/zend/bin/zendctl.sh stop
-
 #ADD zend.conf /etc/supervisor/conf.d/zend.conf
 
 EXPOSE 80
