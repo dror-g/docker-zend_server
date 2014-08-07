@@ -8,9 +8,15 @@
 #FROM ubuntu:raring
 FROM ubuntu:14.04
 
-ADD https://github.com/dror-g/docker-zend_server/blob/master/scripts/add-repo.sh /usr/local/bin/add-repo.sh
-ADD https://github.com/dror-g/docker-zend_server/blob/master/scripts/donothing /usr/local/bin/donothing
-ADD https://github.com/dror-g/docker-zend_server/blob/master/scripts/run /usr/local/bin/run
+ADD https://raw.githubusercontent.com/dror-g/docker-zend_server/blob/master/scripts/add-repo.sh /usr/local/bin/add-repo.sh
+ADD https://raw.githubusercontent.com/docker-zend_server/blob/master/scripts/donothing /usr/local/bin/donothing
+ADD https://raw.githubusercontent.com/dror-g/docker-zend_server/blob/master/scripts/run /usr/local/bin/run
+#ADD https://github.com/dror-g/docker-zend_server/blob/master/scripts/add-repo.sh /usr/local/bin/add-repo.sh
+#ADD https://github.com/dror-g/docker-zend_server/blob/master/scripts/donothing /usr/local/bin/donothing
+#ADD https://github.com/dror-g/docker-zend_server/blob/master/scripts/run /usr/local/bin/run
+#ADD scripts/add-repo.sh /usr/local/bin/add-repo.sh
+#ADD scripts/donothing /usr/local/bin/donothing
+#ADD scripts/run /usr/local/bin/run
 
 RUN apt-get -qqy update
 RUN apt-get -qqy install wget
