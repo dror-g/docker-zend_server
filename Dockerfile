@@ -8,9 +8,9 @@
 #FROM ubuntu:raring
 FROM ubuntu:14.04
 
-ADD add-repo.sh /usr/local/bin/add-repo.sh
-ADD donothing /usr/local/bin/donothing
-ADD run /usr/local/bin/run
+ADD https://github.com/dror-g/docker-zend_server/blob/master/add-repo.sh /usr/local/bin/add-repo.sh
+ADD https://github.com/dror-g/docker-zend_server/blob/master/donothing /usr/local/bin/donothing
+ADD https://github.com/dror-g/docker-zend_server/blob/master/run /usr/local/bin/run
 
 RUN apt-get -qqy update
 RUN apt-get -qqy install wget
