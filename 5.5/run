@@ -1,0 +1,8 @@
+#!/bin/bash
+service zend-server start
+trap 'echo terminating; service zend-server stop;exit' 15
+
+while :
+do
+	sleep 5
+done
